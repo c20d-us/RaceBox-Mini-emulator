@@ -34,12 +34,12 @@
 // Enable only the constellations your module supports and your region benefits from.
 // Enabling too many can reduce the update rate below 25Hz on some modules.
 // Reference: https://app.qzss.go.jp/GNSSView/gnssview.html
-#define ENABLE_GNSS_GPS
-#define ENABLE_GNSS_GALILEO
-// #define ENABLE_GNSS_GLONASS
-// #define ENABLE_GNSS_BEIDOU
-// #define ENABLE_GNSS_SBAS
-// #define ENABLE_GNSS_QZSS
+#define ENABLE_GNSS_GPS       // Essential - always enable
+#define ENABLE_GNSS_GALILEO   // Strong at northern latitudes
+// #define ENABLE_GNSS_GLONASS  // Not supported by M10 hardware
+// #define ENABLE_GNSS_BEIDOU   // Marginal benefit at 122°W — try it if GPS+Galileo rate holds at 25Hz
+// #define ENABLE_GNSS_SBAS     // Can reduce update rate
+// #define ENABLE_GNSS_QZSS     // Invisible from Washington State
 
 // ============================================================================
 // --- IMU SETTINGS ---
