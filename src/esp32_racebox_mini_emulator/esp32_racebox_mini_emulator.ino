@@ -5,10 +5,12 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 #include <SparkFun_u-blox_GNSS_Arduino_Library.h>
+#ifdef BLE_ENABLED
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
 #include <BLE2902.h>
+#endif
 
 SFE_UBLOX_GNSS myGNSS;
 HardwareSerial GPS_Serial(2);
@@ -20,9 +22,11 @@ Adafruit_MPU6050 mpu;
 float filtered_ax = 0, filtered_ay = 0, filtered_az = 0;
 float filtered_gx = 0, filtered_gy = 0, filtered_gz = 0;
 
+#ifdef BLE_ENABLED
 BLEServer *pServer = NULL;
 BLECharacteristic *pCharacteristicTx = NULL;
 BLECharacteristic *pCharacteristicRx = NULL;
+#endif
 volatile bool deviceConnected = false;
 volatile bool oldDeviceConnected = false;
 
@@ -31,6 +35,7 @@ unsigned long lastGpsRateCheckTime = 0;
 volatile unsigned int gpsUpdateCount = 0;
 volatile unsigned int gnssUpdateCount = 0;
 
+#ifdef BLE_ENABLED
 // --- BLE Callbacks ---
 class MyServerCallbacks : public BLEServerCallbacks {
   void onConnect(BLEServer *pServer) {
@@ -60,6 +65,7 @@ class MyCharacteristicCallbacks : public BLECharacteristicCallbacks {
     }
   }
 };
+#endif // BLE_ENABLED
 
 // --- UBX Packet Construction Helpers ---
 void writeLittleEndian(uint8_t* buffer, int offset, uint32_t value) { memcpy(buffer + offset, &value, 4); }
@@ -237,6 +243,7 @@ void setup() {
     Serial.println("🚫 SBAS disabled.");
   #endif
 
+#ifdef BLE_ENABLED
   // --- BLE Setup ---
   BLEDevice::init(deviceName.c_str());
   pServer = BLEDevice::createServer();
@@ -273,6 +280,9 @@ void setup() {
   pAdvertising->setScanResponse(true);
   BLEDevice::startAdvertising();
   Serial.println("📡 BLE advertising started.");
+#else
+  Serial.println("📵 BLE disabled — GNSS/IMU running in serial-only mode.");
+#endif // BLE_ENABLED
 
   lastGpsRateCheckTime = millis();
 }
@@ -426,8 +436,10 @@ void loop() {
         packet[86] = ckA;
         packet[87] = ckB;
 
+#ifdef BLE_ENABLED
         pCharacteristicTx->setValue(packet, 88);
         pCharacteristicTx->notify();
+#endif // BLE_ENABLED
       }
     }
 
@@ -465,6 +477,7 @@ void loop() {
     lastGpsRateCheckTime = now;
   }
 
+#ifdef BLE_ENABLED
   // BLE connection state management — runs regardless of GPS state
   if (!deviceConnected && oldDeviceConnected) {
     delay(BLE_READVERTISE_DELAY_MS);
@@ -474,4 +487,5 @@ void loop() {
   if (deviceConnected && !oldDeviceConnected) {
     oldDeviceConnected = deviceConnected;
   }
+#endif // BLE_ENABLED
 }

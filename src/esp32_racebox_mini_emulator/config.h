@@ -56,6 +56,7 @@
 // --- BLE SETTINGS ---
 // ============================================================================
 
+#define BLE_ENABLED                    // Comment out to disable BLE (e.g. to test GPS reception without RF interference)
 #define BLE_MTU_SIZE             128   // Bytes — must be >= 91 to carry an 88-byte notify
 #define BLE_READVERTISE_DELAY_MS 500   // ms delay before re-advertising after disconnect
 #define LED_BLINK_INTERVAL_MS    500   // ms — LED blink rate while waiting for a BLE connection
@@ -64,7 +65,7 @@
 // --- TIMING & REPORTING ---
 // ============================================================================
 
-#define GPS_RATE_REPORT_INTERVAL_MS 5000 // ms — serial stats reporting interval
+#define GPS_RATE_REPORT_INTERVAL_MS 1000 // ms — serial stats reporting interval
 
 // ============================================================================
 // --- PROTOCOL CONSTANTS ---
