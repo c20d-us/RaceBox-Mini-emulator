@@ -47,13 +47,32 @@ flowchart LR
 
 ## Hardware
 
-| Part           | Notes |
-|----------------|-------|
-| [**ESP32 dev board**](https://www.amazon.com/dp/B0DF2YJSHN) | Developed on an ESP32-WROOM DevKit V1 (30-pin). See [`Documentation/`](Documentation/) for the pinout. |
-| [**u-blox GNSS module**](https://www.amazon.com/dp/B0CB5N8RQ8) | A u-blox **M10**-class receiver. Reference unit: HGLRC M100-5883 (datasheet in [`Documentation/`](Documentation/)). Other u-blox modules supported by the SparkFun library should work. |
-| [**MPU6050**](https://www.amazon.com/dp/B01DK83ZYQ) | I²C 6-axis accelerometer + gyroscope breakout. Reference unit: HiLetgo GY-521 MPU-6050 (datasheet in [`Documentation/`](Documentation/)). |
-|[**Project Box**](https://www.amazon.com/dp/B0BQYPKRQS) | ABS Plastic Project Case, White, 3.15 x 1.97 x 1.02 inch (80 x 50x 26 mm). You need to cut holes into this box to fit your specific board and component layout (see images below). |
-|[**Nylon M2.5 hex standoffs**](https://www.amazon.com/dp/B0FPMC9917) | Nylon hex standoffs, washers, nuts, screws, to help with orienting the components within the project box. |
+<table>
+  <tr>
+    <th width="28%" align="left">Part</th>
+    <th align="left">Notes</th>
+  </tr>
+  <tr>
+    <td><a href="https://www.amazon.com/dp/B0DF2YJSHN"><strong>ESP32 dev board</strong></a></td>
+    <td>Developed on an ESP32-WROOM DevKit V1 (30-pin). See <a href="Documentation/"><code>Documentation/</code></a> for the pinout.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.amazon.com/dp/B0CB5N8RQ8"><strong>u-blox GNSS module</strong></a></td>
+    <td>A u-blox <strong>M10</strong>-class receiver. Reference unit: HGLRC M100-5883 (datasheet in <a href="Documentation/"><code>Documentation/</code></a>). Other u-blox modules supported by the SparkFun library should work.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.amazon.com/dp/B01DK83ZYQ"><strong>MPU6050</strong></a></td>
+    <td>I²C 6-axis accelerometer + gyroscope breakout. Reference unit: HiLetgo GY-521 MPU-6050 (datasheet in <a href="Documentation/"><code>Documentation/</code></a>).</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.amazon.com/dp/B0BQYPKRQS"><strong>Project Box</strong></a></td>
+    <td>ABS Plastic Project Case, White, 3.15 x 1.97 x 1.02 inch (80 x 50 x 26 mm). You need to cut holes into this box to fit your specific board and component layout (see images below).</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.amazon.com/dp/B0FPMC9917"><strong>Nylon M2.5 hex standoffs</strong></a></td>
+    <td>Nylon hex standoffs, washers, nuts, screws, to help with orienting the components within the project box.</td>
+  </tr>
+</table>
 
 ### Wiring
 
