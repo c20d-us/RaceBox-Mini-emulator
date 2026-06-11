@@ -93,18 +93,18 @@ Photos of the reference build, from loose components to the finished, enclosed u
 
 <div align="center">
   <img src="images/completed-emulator.jpeg" alt="The finished RaceBox Mini emulator" width="520"><br>
-  <sub>The completed emulator, decorated with the stickers that came with the GNSS module<br>and an indicator of which end points forward (for Gyro/Accelerometer)</sub><br>&nbsp;
+  <sub>The completed emulator, decorated with the stickers that came with the GNSS module<br>and an indicator of which end points forward (for Gyro/Accelerometer).</sub><br>&nbsp;
 </div>
 
 <table>
   <tr>
     <td align="center" valign="top" width="50%">
       <img src="images/components-and-box.jpeg" alt="Components laid out with the enclosure" width="340"><br>
-      <sub>Components and enclosure prior to assembly</sub><br>&nbsp;
+      <sub>Components and enclosure prior to assembly.</sub><br>&nbsp;
     </td>
     <td align="center" valign="top" width="50%">
       <img src="images/GNSS-and-lid.jpeg" alt="GNSS module with mounting hole in the lid" width="340"><br>
-      <sub>GNSS module with mounting hole in the lid</sub><br>&nbsp;
+      <sub>GNSS module with mounting hole in the lid.</sub><br>&nbsp;
     </td>
   </tr>
   <tr>
@@ -114,25 +114,28 @@ Photos of the reference build, from loose components to the finished, enclosed u
     </td>
     <td align="center" valign="top" width="50%">
       <img src="images/assembled-without-shield.jpeg" alt="Assembly without the RF shield" width="340"><br>
-      <sub>Assembled, using hardening epoxy putty<br>to firmly affix the components</sub>
+      <sub>Assembled, using hardening epoxy putty<br>to firmly affix the components.</sub>
     </td>
   </tr>
   <tr>
     <td align="center" valign="top" width="50%">
       <img src="images/shield-test-fit.jpeg" alt="RF shield test fit" width="340"><br>
-      <sub>RF shield test fit, not yet grounded or affixed</sub><br>&nbsp;
+      <sub>RF shield test fit, not yet grounded or affixed.</sub><br>&nbsp;
     </td>
     <td align="center" valign="top" width="50%">
       <img src="images/shield-grounded.jpeg" alt="RF shield grounded" width="340"><br>
-      <sub>RF shield grounded; I used two-sided tape to mount the shield</sub><br>&nbsp;
+      <sub>RF shield grounded; I used two-sided tape to mount the shield.</sub><br>&nbsp;
     </td>
   </tr>
   <tr>
     <td align="center" valign="top" width="50%">
       <img src="images/box-closed.jpeg" alt="Enclosure closed" width="340"><br>
-      <sub>Enclosure closed up, ready to test (before stickers!)</sub><br>&nbsp;
+      <sub>Enclosure closed up, ready to test (before stickers!).</sub><br>&nbsp;
     </td>
-    <td align="center" valign="top" width="50%"></td>
+    <td align="center" valign="top" width="50%">
+      <img src="images/powered-up.jpeg" alt="Connected and working" width="340"><br>
+      <sub>Connected to power, LEDs lit up.</sub><br>&nbsp;
+    </td>
   </tr>
 </table>
 
