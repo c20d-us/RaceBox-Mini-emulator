@@ -45,7 +45,7 @@ flowchart LR
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0CB5N8RQ8"><strong>u-blox GNSS module</strong></a></td>
-    <td>A u-blox <a href="https://www.u-blox.com/en/product/max-m10-series"><strong>M10</strong>-class></a> receiver. Reference unit: HGLRC M100-5883 (datasheet in <a href="Documentation/"><code>Documentation/</code></a>). Other u-blox modules supported by the SparkFun library should work.</td>
+    <td>A u-blox <a href="https://www.u-blox.com/en/product/max-m10-series"><strong>M10</strong>-class</a> receiver. Reference unit: HGLRC M100-5883 (datasheet in <a href="Documentation/"><code>Documentation/</code></a>). Other u-blox modules supported by the SparkFun library should work.</td>
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B01DK83ZYQ"><strong>MPU6050</strong></a></td>
@@ -93,7 +93,7 @@ Photos of the reference build, from loose components to the finished, enclosed u
 
 <div align="center">
   <img src="images/completed-emulator.jpeg" alt="The finished RaceBox Mini emulator" width="520"><br>
-  <sub>The completed emulator, decorated with the stickers that came with the GNSS module and an indicator of which end points forward (for Gyro/Accelerometer)</sub>
+  <sub>The completed emulator, decorated with the stickers that came with the GNSS module<br>and an indicator of which end points forward (for Gyro/Accelerometer)</sub>
 </div>
 
 <table>
