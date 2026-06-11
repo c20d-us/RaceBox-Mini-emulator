@@ -216,7 +216,7 @@ The **RF shield** shown in the [build gallery](#build-gallery) is the hardware c
 
 ## Credits
 
-This project is a fork and continuation of earlier work by **Anchit Chandra Sekhar** ([github.com/anchit92](https://github.com/anchit92)). Changes in this fork include bug fixes, externalized configuration, a BLE transmit-power control, startup gyro calibration, and an ongoing modularization of the codebase.
+This project is a fork and continuation of earlier work by **Anchit Chandra Sekhar** ([github.com/anchit92](https://github.com/anchit92)). Changes in this fork include bug fixes, externalized configuration, a BLE transmit-power control, startup gyro calibration, and modularization of the codebase.
 
 Protocol details follow the *RaceBox BLE Protocol Description* (rev 8), included in [`Documentation/`](Documentation/).
 
