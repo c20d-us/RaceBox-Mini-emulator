@@ -67,7 +67,7 @@ void gnssBegin() {
   // Set GNSS output to PVT only
   myGNSS.setAutoPVT(true);
   myGNSS.setDynamicModel(GNSS_DYNAMIC_MODEL);
-  // --- Configure GPS update rate to MAX_NAVIGATION_RATE Hz ---
+  // --- Configure GNSS update rate to MAX_NAVIGATION_RATE Hz ---
   if (myGNSS.setNavigationFrequency(MAX_NAVIGATION_RATE)) {
     Serial.printf("✅ GNSS update rate set to %d Hz.\n", MAX_NAVIGATION_RATE);
   } else {
@@ -100,7 +100,7 @@ void gnssBegin() {
   Serial.println("🚫 Galileo disabled.");
 #endif
 
-// Optional: GLONASS
+// GLONASS
 #ifdef ENABLE_GNSS_GLONASS
   if (myGNSS.enableGNSS(true, SFE_UBLOX_GNSS_ID_GLONASS)) {
     Serial.println("✅ GLONASS enabled.");
@@ -112,7 +112,7 @@ void gnssBegin() {
   Serial.println("🚫 GLONASS disabled.");
 #endif
 
-// Optional: BeiDou
+// BeiDou
 #ifdef ENABLE_GNSS_BEIDOU
   if (myGNSS.enableGNSS(true, SFE_UBLOX_GNSS_ID_BEIDOU)) {
     Serial.println("✅ BEIDOU enabled.");
@@ -124,7 +124,7 @@ void gnssBegin() {
   Serial.println("🚫 BEIDOU disabled.");
 #endif
 
-// Optional: QZSS
+// QZSS
 #ifdef ENABLE_GNSS_QZSS
   if (myGNSS.enableGNSS(true, SFE_UBLOX_GNSS_ID_QZSS)) {
     Serial.println("✅ QZSS enabled.");
@@ -136,7 +136,7 @@ void gnssBegin() {
   Serial.println("🚫 QZSS disabled.");
 #endif
 
-// Optional: SBAS (satellite-based augmentation)
+// SBAS (satellite-based augmentation)
 #ifdef ENABLE_GNSS_SBAS
   if (myGNSS.enableGNSS(true, SFE_UBLOX_GNSS_ID_SBAS)) {
     Serial.println("✅ SBAS enabled.");

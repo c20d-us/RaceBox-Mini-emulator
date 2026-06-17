@@ -13,8 +13,8 @@ static volatile unsigned int gnssEpochCount = 0;
 
 void telemetryBegin() { lastReportMs = millis(); }
 
-// --- Assemble an 88-byte RaceBox Data Message from the latest GNSS + IMU data.
-// Fills packet[0..87] with the UBX header, 80-byte payload, and checksum. ---
+// Assemble an 88-byte RaceBox Data Message from the latest GNSS + IMU data.
+// Fills packet[0..87] with the UBX header, 80-byte payload, and checksum.
 static void buildPacket(uint8_t *packet) {
   ImuProtocolUnits imu = imuReadProtocolUnits();
 
@@ -53,8 +53,8 @@ static void buildPacket(uint8_t *packet) {
   writeLittleEndian(payload, 16, (int32_t)pvt->nano); // I4
 
   // Offset 20: Fix Status (RaceBox Protocol)
-  // Protocol only defines 0 (no fix), 2 (2D fix), 3 (3D fix) - clamp any
-  // other u-blox fix types (e.g. 1=DR only, 4=GNSS+DR) to 0 (no fix).
+  // Protocol only defines 0 (no fix), 2 (2D fix), 3 (3D fix).
+  // Clamp other u-blox fix types (e.g. 1=DR only, 4=GNSS+DR) to 0 (no fix).
   uint8_t safeFixType =
       (pvt->fixType == 2 || pvt->fixType == 3) ? pvt->fixType : 0;
   writeLittleEndian(payload, 20, safeFixType);
@@ -108,8 +108,8 @@ static void buildPacket(uint8_t *packet) {
   }
   writeLittleEndian(payload, 66, latLonFlags);
 
-  // Offset 67: Battery status (1 byte) - report 100% to avoid low battery
-  // warnings
+  // Offset 67: Battery status (1 byte)
+  // Report 100% to avoid low battery warnings.
   writeLittleEndian(payload, 67, (uint8_t)BATTERY_REPORT_PERCENT);
 
   writeLittleEndian(payload, 68, imu.gX);
@@ -133,7 +133,7 @@ static void buildPacket(uint8_t *packet) {
   packet[87] = ckB;
 }
 
-// --- On each new GNSS epoch, count it and (when connected) send a packet ---
+// On each new GNSS epoch, count it and (when connected) send a packet
 void telemetrySendPacketIfReady() {
   if (!gnssHasNewEpoch())
     return;
@@ -149,7 +149,7 @@ void telemetrySendPacketIfReady() {
   bleSendPacket(packet, 88);
 }
 
-// --- Periodically print packet rate and GNSS/IMU debug stats over serial ---
+// Periodically print packet rate and GNSS/IMU debug stats over serial
 void telemetryReport() {
   // Report packet send rate - runs regardless of GPS state
   const unsigned long now = millis();

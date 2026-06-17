@@ -9,8 +9,8 @@
 // module interfaces; owns no hardware itself.
 // ============================================================================
 
-// Start the stats-report timer. Call once in setup(), after the other modules
-// are up.
+// Start the stats-report timer.
+// Call once in setup(), after the other modules are up.
 void telemetryBegin();
 
 // On each new GNSS epoch, count it and - when a client is connected - build and

@@ -26,7 +26,7 @@
 #define ONBOARD_LED_PIN 2
 
 // ============================================================================
-// --- GPS / GNSS SETTINGS ---
+// --- GNSS SETTINGS ---
 // ============================================================================
 
 #define GNSS_BAUD 115200
@@ -72,7 +72,7 @@
 // BLE Transmit Power
 // Select one of the following levels by assigning it to BLE_TX_POWER.
 // Lower power reduces potential RF interference with the GNSS module.
-// The receiver will usually be close, so high power is not really needed.
+// The receiver will usually be close, so high power is not usually needed.
 // If you have connection drops, try increasing the power level.
 //   ESP_PWR_LVL_N12  =  -12 dBm (minimum power)
 //   ESP_PWR_LVL_N9   =   -9 dBm

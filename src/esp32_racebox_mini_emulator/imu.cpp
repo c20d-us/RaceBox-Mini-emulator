@@ -37,7 +37,7 @@ static void calibrateGyro() {
 
 void imuBegin() {
   if (!myIMU.begin()) {
-    Serial.println("❌ Failed to find MPU6050 chip");
+    Serial.println("❌ Failed to find IMU module");
     while (1)
       delay(100);
   } else {
