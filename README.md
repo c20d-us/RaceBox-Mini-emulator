@@ -49,7 +49,7 @@ flowchart LR
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B01DK83ZYQ"><strong>IMU module</strong></a></td>
-    <td>I²C 6-axis accelerometer + gyroscope breakout. Reference unit: HiLetgo GY-521 based on the <a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">InvenSense MPU-6050</a>.</td>
+    <td>I²C 6-axis accelerometer + gyroscope breakout. Reference unit: [HiLetgo GY-521](http://www.hiletgo.com/ProductDetail/2157948.html) based on the <a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">InvenSense MPU-6050</a>.</td>
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0BQYPKRQS"><strong>Project Box</strong></a></td>
