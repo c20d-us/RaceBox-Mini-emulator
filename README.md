@@ -41,15 +41,15 @@ flowchart LR
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0DF2YJSHN"><strong>ESP32 dev board</strong></a></td>
-    <td>Developed on an AITRIP ESP32-WROOM-32 Development Board. See <a href="Documentation/"><code>Documentation/</code></a> for the pinout.</td>
+    <td>Developed on an AITRIP ESP32-WROOM-32 Development Board. See the <a href="https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf">ESP32-WROOM-32 datasheet</a> for the pinout.</td>
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0CB5N8RQ8"><strong>u-blox GNSS module</strong></a></td>
-    <td>A u-blox <a href="https://www.u-blox.com/en/product/max-m10-series">M10-class</a> receiver. Reference unit: HGLRC M100-5883 (datasheet in <a href="Documentation/"><code>Documentation/</code></a>). Other u-blox modules supported by the SparkFun library should work.</td>
+    <td>A u-blox <a href="https://www.u-blox.com/en/product/max-m10-series">M10-class</a> receiver. Reference unit: <a href="https://www.hglrc.com/products/m100-5883-gps">HGLRC M100-5883</a>. Other u-blox modules supported by the SparkFun library should work.</td>
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B01DK83ZYQ"><strong>IMU</strong></a></td>
-    <td>I²C 6-axis accelerometer + gyroscope breakout. Reference unit: HiLetgo GY-521 MPU-6050 (datasheet in <a href="Documentation/"><code>Documentation/</code></a>).</td>
+    <td>I²C 6-axis accelerometer + gyroscope breakout. Reference unit: HiLetgo GY-521 based on the <a href="https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/">InvenSense MPU-6050</a>.</td>
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0BQYPKRQS"><strong>Project Box</strong></a></td>
@@ -220,7 +220,7 @@ With the BLE power level set to -12db, I have seen simultaneuous lock on as many
 
 This project is a fork and continuation of earlier work by **Anchit Chandra Sekhar** ([github.com/anchit92](https://github.com/anchit92)). Changes in this fork include bug fixes, externalized configuration, a BLE transmit-power control, startup gyro calibration, and modularization of the codebase.
 
-Protocol details follow the *RaceBox BLE Protocol Description* (rev 8), included in [`Documentation/`](Documentation/).
+Protocol details follow the *RaceBox BLE Protocol Description* (rev 8), available from RaceBox at [racebox.pro/products/mini-micro-protocol-documentation](https://www.racebox.pro/products/mini-micro-protocol-documentation).
 
 ---
 
