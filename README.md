@@ -53,7 +53,7 @@ flowchart LR
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0BQYPKRQS"><strong>Project Box</strong></a></td>
-    <td>ABS Plastic Project Case, White, 3.15 x 1.97 x 1.02 inch (80 x 50 x 26 mm). You'll need to cut holes into this box to fit your specific board and component layout (see images below).</td>
+    <td>ABS Plastic Project Case, White, 80x50x26mm. You'll need to cut holes into this box to fit your specific board and component layout (see images below).</td>
   </tr>
   <tr>
     <td><a href="https://www.amazon.com/dp/B0FPMC9917"><strong>Nylon M2.5 hex standoffs</strong></a></td>
